@@ -12,7 +12,7 @@ class Card
     public function __construct(string $card)
     {
         $this->value = substr($card,0,1);
-        $this->suit = substr($card,1,1);
+        $this->suit  = substr($card,1,1);
 
         //$this->score = $this->getScore($this->value);
 
@@ -22,24 +22,12 @@ class Card
 
         if($otherCard->value != $this->value){
 
-            echo 'hello';
-
             return -1;
 
         }
 
-        echo 'goodbye';
-
         return 0;
     }
-
-
-
-
-
-
-
-
 
     private function getScore($value)
     {
@@ -62,10 +50,6 @@ class Card
                 return 10;
 
                 return $value;
-
         }
     }
-
-
-
 }
